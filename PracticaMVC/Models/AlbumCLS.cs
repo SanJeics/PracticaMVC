@@ -9,16 +9,16 @@ namespace PracticaMVC.Models
     public class AlbumCLS
     {
         [Display(Name ="Nombre del Album")]
-        string AlbumName { get; set; }
+        public string AlbumName { get; set; }
 
         [Display(Name = "Fecha de Salida")]
-        DateTime DateReleased { get; set; }
+        public DateTime DateReleased { get; set; }
 
         [Display(Name = "Id de Artista")]
-        int ArtistID { get; set; }
+        public int ArtistID { get; set; }
 
         [Display(Name = "Id de Genero")]
-        int GenreID { get; set; }
+        public int GenreID { get; set; }
 
     }
 }
