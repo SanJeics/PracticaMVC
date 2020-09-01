@@ -60,7 +60,9 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xml.Linq" />
@@ -135,14 +137,16 @@
     </Compile>
     <Compile Include="Models\AlbumCLS.cs" />
     <Compile Include="Models\Albums.cs">
-      <DependentUpon>ModelInvoice.tt</DependentUpon>
+      <DependentUpon>ModelMusicman.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Artist.cs">
-      <DependentUpon>ModelInvoice.tt</DependentUpon>
+      <DependentUpon>ModelMusicman.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ArtistCLS.cs" />
     <Compile Include="Models\Genre.cs">
-      <DependentUpon>ModelInvoice.tt</DependentUpon>
+      <DependentUpon>ModelMusicman.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GenreCLS.cs" />
     <Compile Include="Models\ModelInvoice.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +161,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelInvoice.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelMusicman.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelMusicman.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelMusicman.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelMusicman.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelMusicman.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelMusicman.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -179,6 +198,16 @@
       <DependentUpon>ModelInvoice.edmx</DependentUpon>
       <LastGenOutput>ModelInvoice.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\ModelMusicman.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelMusicman.edmx</DependentUpon>
+      <LastGenOutput>ModelMusicman.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelMusicman.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelMusicman.edmx</DependentUpon>
+      <LastGenOutput>ModelMusicman.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\ModelInvoice.edmx">
@@ -187,6 +216,13 @@
     </EntityDeploy>
     <Content Include="Models\ModelInvoice.edmx.diagram">
       <DependentUpon>ModelInvoice.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\ModelMusicman.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelMusicman.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelMusicman.edmx.diagram">
+      <DependentUpon>ModelMusicman.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

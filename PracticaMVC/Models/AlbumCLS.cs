@@ -14,11 +14,11 @@ namespace PracticaMVC.Models
         [Display(Name = "Fecha de Salida")]
         public DateTime DateReleased { get; set; }
 
-        [Display(Name = "Id de Artista")]
+        /*[Display(Name = "Id de Artista")]
         public int ArtistID { get; set; }
 
         [Display(Name = "Id de Genero")]
-        public int GenreID { get; set; }
+        public int GenreID { get; set; }*/
 
     }
 }
